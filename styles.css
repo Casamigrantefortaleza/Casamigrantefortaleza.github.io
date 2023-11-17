@@ -1,0 +1,453 @@
+/* Estilo geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    /* Fundo mais claro */
+    margin: 0;
+    padding: 0;
+    color: #333;
+  
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  /* Estilo do menu */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 0.1rem solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #D2B48C;
+    margin-bottom: 50px;
+  
+  }
+  
+  .menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+  }
+  
+  .menu h1 {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .menu h1 a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    margin: 0;
+  }
+  
+  .menu ul li a {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0.6rem;
+    left: 50%;
+    width: 0;
+    height: 0.1rem;
+    background: red;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+  }
+  
+  h1 {
+    top: auto;
+    font-size: 32px;
+  }
+  
+  .title-section {
+    text-align: center;
+    /* Centraliza o conteúdo horizontalmente */
+  
+  }
+  
+  .title-section h2 {
+    font-size: 36px;
+    color: #333;
+    /* Cor do texto do título */
+  }
+  
+
+  .image-section {
+    background-image: url('sua-imagem.jpg');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  /* Estilize a seção do carrossel */
+  .image-section .carousel {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    /* Defina a altura como 100% da seção */
+  }
+  
+  /* Estilize os slides do carrossel */
+  .image-section .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* Defina a altura como 100% da seção */
+    background-size: cover;
+  }
+  
+  /* Estilize as imagens nos slides */
+  .image-section .slide img {
+    width: 90%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-image {
+    width: 50%;
+    /* Ajusta a largura para ocupar 100% do contêiner */
+    height: auto;
+    /* Isso garante que a proporção da imagem seja mantida */
+    max-height: 380px;
+    /* Define uma altura máxima para as imagens */
+    display: block;
+    /* Remove espaços em branco indesejados sob as imagens */
+    margin: 0 auto;
+    /* Centraliza as imagens horizontalmente */
+    object-fit: cover;
+  }
+  
+  /* Estilize a legenda das imagens */
+  .caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Cor de fundo para a legenda */
+    color: #fff;
+    /* Cor do texto da legenda */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente a legenda */
+    max-width: 90%;
+    /* Largura máxima igual a 90% da largura do slide */
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    /* Tamanho da fonte da legenda */
+  }
+  
+  .carousel-image-container {
+    position: relative;
+  
+  }
+  
+  /* Estilizar os dots do Slick Carousel */
+  .slick-dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  
+  /* Estilizar cada dot */
+  .slick-dots li {
+    margin: 0 5px;
+    /* Espaçamento horizontal entre os dots */
+  }
+  
+  /* Estilizar o botão do dot */
+  .slick-dots li button {
+    background: #ccc;
+    /* Cor de fundo dos dots inativos */
+    width: auto;
+    /* Largura dos dots inativos */
+    height: auto;
+    /* Altura dos dots inativos */
+    border: none;
+    border-radius: 50%;
+    /* Deixa os dots circulares */
+  }
+  
+  /* Estilizar o botão do dot ativo */
+  .slick-dots li.slick-active button {
+    background: #A0522D;
+    /* Cor de fundo do dot ativo */
+  }
+  
+  /* Estilize a seção de serviços */
+  .services-section {
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  /* Estilize o título da seção */
+  .services-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    /* Alinha os cards horizontalmente */
+    flex-wrap: wrap;
+    /* Quebra para próxima linha quando não couber na largura */
+  }
+  
+  /* Estilize os cards de serviços */
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    flex-wrap: wrap;
+  }
+  
+  /* Estilize cada card de serviço */
+  .service-card {
+    background-color: #f3f3f3;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+  }
+  
+  .service-icon {
+    font-size: 36px;
+    /* Tamanho fixo para todos os ícones */
+    margin-bottom: 10px;
+  }
+  
+  /* Estilize os ícones */
+  .service-card i {
+    font-size: 36px;
+    color: #CCCCCC;
+    margin-bottom: 15px;
+  }
+  
+  /* Estilize os títulos dos serviços */
+  .service-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Estilize as descrições dos serviços */
+  .service-card p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  /* Estilize os links (se necessário) */
+  .service-card a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+  }
+  
+  /* Efeito de hover para os cards (opcional) */
+  .service-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .description-section {
+    padding: 20px;
+    /* background-color: #fff;*/
+    /* Fundo branco */
+    margin: 20px;
+    margin-top: 70px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 10px
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    /* Texto mais escuro */
+  }
+
+  
+  h3 {
+    font-size: 20px;
+    color: #fff;
+    /* Texto branco para títulos */
+  }
+  
+  /* Estilize o botão "Quero ser voluntário!" */
+  .volunteer-button {
+    display: inline-block;
+    background-color: #c9a27e;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+  
+  }
+  
+  .volunteer-button:hover {
+    background-color: #d6dfa9;
+  }
+  
+  .volunteer-section {
+    /* background-color: #fff;*/
+    /* Fundo branco */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    font-size: 20px;
+    color: #A05836;
+    /* Cor de destaque da ONG para títulos */
+  }
+  
+  /* Ícones de mídia social */
+  .icon {
+    color: #A05836;
+    /* Cor de destaque da ONG para ícones de mídia social */
+    font-size: 24px;
+    margin: 10px;
+    text-decoration: none;
+  }
+  
+  /* Estilize o footer */
+  /* Estilize o footer */
+  .footer {
+    background-color: #D2B48C;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Estilize as informações de contato */
+  .contact-info {
+    width: 45%;
+    /* Largura da coluna de informações de contato */
+    padding: 0 20px;
+  }
+  
+  .contact-info h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  /* Estilize os ícones de redes sociais */
+  .social-media {
+    width: 45%;
+    /* Largura da coluna de redes sociais */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-media h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilize os ícones de redes sociais */
+  .social-icons a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 5px 0;
+  }
+  
+  /* Altere a cor dos ícones de redes sociais quando o mouse passar por cima */
+  .social-icons a:hover {
+    color: #d6dfa9;
+  }
+  
+  @media (max-width: 768px) {}
+
+  .donation-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .donation-section h2 {
+    font-size: 24px;
+    color: #A05836;
+  }
+  
+  .description-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .description-section ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .description-section img {
+    max-width: 25%; /* Reduz a largura da imagem para 80% */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centraliza a imagem */
+  }
+  
+  .description-section pre {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
